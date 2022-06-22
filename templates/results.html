@@ -1,20 +1,16 @@
 <html>
     <head>
-<!--       {% if props.first_name %}
-        <title>Welcome {{props.first_name}}!</title> -->
-<!--       {% else %} -->
         <title>My Generation</title>
-<!--       {% endif %} -->
-        <link rel="stylesheet" href="../static/css/style.css?q={{time}}">
+        <link rel="stylesheet" href="../static/css/style.css">
     </head>
     <body>
-        <h1>What generation do you belong to?</h1>
-        <p>Fill in the blanks to find out!</p>
+        <h1>You were born in {{user_birth_year}}.</h1>
+        <h3>{{generation}}</h3>
+        <p>Have a great day, {{user_name}}!</p>
         <form method = "post" action = "results">
             <input type="text" name="name" placeholder="Enter your name"/>
             <input type="text" name="birth year" placeholder="Enter the year you were born"/>
             <input type="submit" value="Submit"/>
         </form>
-      <img src = "/static/images/timeline.jpg"/>
     </body>
 </html>
